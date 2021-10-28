@@ -1,0 +1,16 @@
+C:\Users\Markus Altenhofer\source\repos\ThreadingOnSite\ThreadingOnSite\bin\Debug\net5.0\ThreadingOnSite.exe
+C:\Users\Markus Altenhofer\source\repos\ThreadingOnSite\ThreadingOnSite\bin\Debug\net5.0\ThreadingOnSite.deps.json
+C:\Users\Markus Altenhofer\source\repos\ThreadingOnSite\ThreadingOnSite\bin\Debug\net5.0\ThreadingOnSite.runtimeconfig.json
+C:\Users\Markus Altenhofer\source\repos\ThreadingOnSite\ThreadingOnSite\bin\Debug\net5.0\ThreadingOnSite.runtimeconfig.dev.json
+C:\Users\Markus Altenhofer\source\repos\ThreadingOnSite\ThreadingOnSite\bin\Debug\net5.0\ThreadingOnSite.dll
+C:\Users\Markus Altenhofer\source\repos\ThreadingOnSite\ThreadingOnSite\bin\Debug\net5.0\ref\ThreadingOnSite.dll
+C:\Users\Markus Altenhofer\source\repos\ThreadingOnSite\ThreadingOnSite\bin\Debug\net5.0\ThreadingOnSite.pdb
+C:\Users\Markus Altenhofer\source\repos\ThreadingOnSite\ThreadingOnSite\obj\Debug\net5.0\ThreadingOnSite.csproj.AssemblyReference.cache
+C:\Users\Markus Altenhofer\source\repos\ThreadingOnSite\ThreadingOnSite\obj\Debug\net5.0\ThreadingOnSite.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Markus Altenhofer\source\repos\ThreadingOnSite\ThreadingOnSite\obj\Debug\net5.0\ThreadingOnSite.AssemblyInfoInputs.cache
+C:\Users\Markus Altenhofer\source\repos\ThreadingOnSite\ThreadingOnSite\obj\Debug\net5.0\ThreadingOnSite.AssemblyInfo.cs
+C:\Users\Markus Altenhofer\source\repos\ThreadingOnSite\ThreadingOnSite\obj\Debug\net5.0\ThreadingOnSite.csproj.CoreCompileInputs.cache
+C:\Users\Markus Altenhofer\source\repos\ThreadingOnSite\ThreadingOnSite\obj\Debug\net5.0\ThreadingOnSite.dll
+C:\Users\Markus Altenhofer\source\repos\ThreadingOnSite\ThreadingOnSite\obj\Debug\net5.0\ref\ThreadingOnSite.dll
+C:\Users\Markus Altenhofer\source\repos\ThreadingOnSite\ThreadingOnSite\obj\Debug\net5.0\ThreadingOnSite.pdb
+C:\Users\Markus Altenhofer\source\repos\ThreadingOnSite\ThreadingOnSite\obj\Debug\net5.0\ThreadingOnSite.genruntimeconfig.cache
