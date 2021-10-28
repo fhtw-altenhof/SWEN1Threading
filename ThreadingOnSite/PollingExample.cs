@@ -13,7 +13,10 @@ namespace ThreadingOnSite {
         private volatile int resultsFinished;
         private Object resultsLocker = new Object();
 
+        private Task[] tasks;
+
         public void Run() {
+            tasks = new Task[MaxResult];
             results = new string[MaxResult];
             resultsFinished = 0;
 
@@ -28,11 +31,12 @@ namespace ThreadingOnSite {
                     }
                 }, i);
 
+                tasks[i] = t;
                 t.Start();
             }
 
-            while (resultsFinished < MaxResult) {
-                Thread.Sleep(50);
+            foreach (var task in tasks) {
+                task.Wait();
             }
 
             for (int i = 0; i < MaxResult; i++) {

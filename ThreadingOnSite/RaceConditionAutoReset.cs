@@ -13,11 +13,13 @@ namespace ThreadingOnSite {
 
         private double[] buffer;
 
-        private AutoResetEvent signal;
+        private AutoResetEvent signalReader;
+        private AutoResetEvent signalWriter;
 
         public void Run() {
             buffer = new double[BufferSize];
-            signal = new AutoResetEvent(false);
+            signalReader = new AutoResetEvent(false);
+            signalWriter = new AutoResetEvent(true);
 
             // new threads
             Thread t1 = new Thread(Reader);
@@ -35,19 +37,21 @@ namespace ThreadingOnSite {
         private void Reader() {
             int readerIndex = 0;
             for (int i = 0; i < ManipulationSteps; i++) {
-                signal.WaitOne();
+                signalReader.WaitOne();
                 Console.WriteLine($"current read index {buffer[readerIndex]}");
                 readerIndex = (readerIndex + 1) % BufferSize;
+                signalWriter.Set();
             }
         }
 
         private void Writer() {
             int writerIndex = 0;
             for (int i = 0; i < ManipulationSteps; i++) {
+                signalWriter.WaitOne();
                 buffer[writerIndex] = (double)i;
                 Console.WriteLine($"current write index {buffer[writerIndex]}");
                 writerIndex = (writerIndex + 1) % BufferSize;
-                signal.Set();
+                signalReader.Set();
             }
         }
     }

@@ -6,32 +6,34 @@ using System.Threading.Tasks;
 
 namespace ThreadingOnSite {
     class Program {
-        static async Task Main(string[] args) {
-            //RaceCondition rc = new RaceCondition();
+        //static async Task Main(string[] args) {
+        static void Main(string[] args) {
 
-            //Thread prgmA = new Thread(new ThreadStart(rc.FirstThread));
-            //Thread prgmB = new Thread(new ThreadStart(rc.SecondThread));
+            RaceCondition rc = new RaceCondition();
 
-            //prgmA.Start();
-            //prgmB.Start();
+            Thread prgmA = new Thread(new ThreadStart(rc.FirstThread));
+            Thread prgmB = new Thread(new ThreadStart(rc.SecondThread));
 
-            //LimitedConnection lc = new LimitedConnection();
-            //IEnumerable<string> urls = new List<string>() { 
-            //    "google", "bing", "duckduckgo", "scroogle",
-            //    "google", "bing", "duckduckgo", "scroogle",
-            //    "google", "bing", "duckduckgo", "scroogle",
-            //    "google", "bing", "duckduckgo", "scroogle"
-            //};
-            //lc.DownloadFiles(urls);
+            prgmA.Start();
+            prgmB.Start();
 
-            //RaceConditionAutoReset rca = new RaceConditionAutoReset();
-            //rca.Run();
+            LimitedConnection lc = new LimitedConnection();
+            IEnumerable<string> urls = new List<string>() {
+                "google", "bing", "duckduckgo", "scroogle",
+                "google", "bing", "duckduckgo", "scroogle",
+                "google", "bing", "duckduckgo", "scroogle",
+                "google", "bing", "duckduckgo", "scroogle"
+            };
+            lc.DownloadFiles(urls);
 
-            //PollingExample pe = new PollingExample();
-            //pe.Run();
+            RaceConditionAutoReset rca = new RaceConditionAutoReset();
+            rca.Run();
 
-            AsyncExample ae = new AsyncExample();
-            await ae.CallingMethod();
+            PollingExample pe = new PollingExample();
+            pe.Run();
+
+            //AsyncExample ae = new AsyncExample();
+            //await ae.CallingMethod();
         }
     }
 }
